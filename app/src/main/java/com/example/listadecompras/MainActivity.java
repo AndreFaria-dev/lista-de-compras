@@ -33,10 +33,9 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Abrir caixa de diálogo com entrada de texto para gravar o nome
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Insira o nome para a lista");
-
+//            Abrir formulário de lista sem os dados (criar)
+                Intent intent = new Intent(view.getContext(), ListaActivity.class);
+                startActivity(intent);
             }
         });
 

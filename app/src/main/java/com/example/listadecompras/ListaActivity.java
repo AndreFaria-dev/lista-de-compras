@@ -9,18 +9,18 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.listadecompras.databinding.ActivityAddListaBinding;
+import com.example.listadecompras.databinding.ActivityListaBinding;
 
 public class ListaActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityAddListaBinding binding;
+    private ActivityListaBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityAddListaBinding.inflate(getLayoutInflater());
+        binding = ActivityListaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);

@@ -9,7 +9,7 @@
         android:id="@+id/FirstFragment"
         android:name="com.example.listadecompras.FirstFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_lista_compra">
 
     </fragment>
 <!--    <fragment-->

@@ -1,29 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerLista"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    android:layout_margin="10dp"
+    tools:context=".ListaCompraFragment"
+    android:orientation="vertical">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/nomeLista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:hint="Nome da lista"
+        android:ems="10"
         android:inputType="textPersonName"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:text="Lista de compra 17/12" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProdutos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="485dp"
+        android:layout_below="@+id/nomeLista"
+        tools:listitem="@layout/item_lista"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginEnd="0dp">
 
-        android:layout_marginVertical="10dp"
-        android:layout_marginHorizontal="10dp"
-        />
+    </androidx.recyclerview.widget.RecyclerView>
 
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="397dp"-->
+<!--        android:layout_height="125dp"-->
+<!--        android:layout_below="@id/listaProduto"-->
+<!--        tools:layout_editor_absoluteX="1dp"-->
+<!--        tools:layout_editor_absoluteY="732dp">-->
 
-</RelativeLayout>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="179dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/labelValor"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:text="valor total:" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/valorPreco"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:text="R$ 0,00"-->
+
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Large" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/buttonSalvar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:minHeight="48dp"-->
+
+<!--                android:text="Salvar" />-->
+<!--        </LinearLayout>-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+</LinearLayout>

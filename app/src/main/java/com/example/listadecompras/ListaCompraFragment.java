@@ -7,11 +7,11 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.listadecompras.databinding.FragmentListaCompraBinding;
+import com.example.listadecompras.model.Produto;
 
-public class FirstFragment extends Fragment {
+public class ListaCompraFragment extends Fragment {
 
     private FragmentListaCompraBinding binding;
 
@@ -22,11 +22,17 @@ public class FirstFragment extends Fragment {
     ) {
 
         binding = FragmentListaCompraBinding.inflate(inflater, container, false);
+
+
+
         return binding.getRoot();
 
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+
+        System.out.println("TESTE LISTA DE COMPRA INICIALIZADA");
+
         super.onViewCreated(view, savedInstanceState);
 
 

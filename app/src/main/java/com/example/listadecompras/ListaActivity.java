@@ -20,6 +20,7 @@ public class ListaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         binding = ActivityListaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -29,7 +30,8 @@ public class ListaActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
-
+        //Exibir botão de voltar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

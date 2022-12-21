@@ -3,6 +3,11 @@ package com.example.listadecompras.model;
 import java.util.Date;
 
 public class ListaDeCompra {
+    public ListaDeCompra(String nome, Date dtCriacao) {
+        this.nome = nome;
+        this.dtCriacao = dtCriacao;
+    }
+
     String nome;
     Date dtCriacao;
 

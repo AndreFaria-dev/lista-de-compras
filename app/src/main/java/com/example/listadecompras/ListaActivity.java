@@ -8,8 +8,11 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.listadecompras.databinding.ActivityListaBinding;
+import com.example.listadecompras.model.Produto;
 
 public class ListaActivity extends AppCompatActivity {
 
@@ -32,6 +35,11 @@ public class ListaActivity extends AppCompatActivity {
 
         //Exibir botão de voltar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+//        RecyclerView recyclerView = findViewById(R.id.recyclerProdutos);
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(layoutManager);
+
     }
 
     @Override

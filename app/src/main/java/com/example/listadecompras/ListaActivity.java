@@ -1,6 +1,8 @@
 package com.example.listadecompras;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,6 +42,18 @@ public class ListaActivity extends AppCompatActivity {
 //        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 //        recyclerView.setLayoutManager(layoutManager);
 
+
+
+
+    }
+
+    public void abrirFormProdutos(View view){
+        Intent intent = new Intent(this, ProdutoActivity.class);
+        startActivity(intent);
+    }
+
+    public void salvarListaCompra(View view){
+        System.out.println("Validando antes de salvar os dados inseridos no form");
     }
 
     @Override

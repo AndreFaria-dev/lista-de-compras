@@ -48,13 +48,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:onClick="abrirFormProdutos"
                     android:text="Adicionar produto" />
 
                 <Button
                     android:id="@+id/button_salvar_lista"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:onClick="salvarListaCompra"
                     android:text="Salvar lista" />
             </LinearLayout>
         </LinearLayout>

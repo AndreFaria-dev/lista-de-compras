@@ -1,8 +1,11 @@
 package com.example.listadecompras;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.listadecompras.databinding.ActivityListaBinding;
 import com.example.listadecompras.model.Produto;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class ListaActivity extends AppCompatActivity {
 
@@ -53,7 +57,19 @@ public class ListaActivity extends AppCompatActivity {
     }
 
     public void salvarListaCompra(View view){
-        System.out.println("Validando antes de salvar os dados inseridos no form");
+
+        System.out.println("Salvar o nome da lista e os produtos adicionados no sqlite");
+        EditText editText = findViewById(R.id.edit_text_nome_lista);
+        String nomeLista = editText.getText().toString();
+
+
+        if (!nomeLista.isEmpty()){
+            System.out.println("Salvar nome da lista: " + nomeLista);
+            
+        }else {
+            System.out.println("Nome de lista inválido" + nomeLista);
+            editText.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+        }
     }
 
     @Override
